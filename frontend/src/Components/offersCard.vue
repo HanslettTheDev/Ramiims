@@ -28,6 +28,8 @@ defineProps({
 </template>
 
 <style scoped>
+/*Style for OffersCard component*/
+
 .service-box {
   width: 300px;
   height: 400px;
