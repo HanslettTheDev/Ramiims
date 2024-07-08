@@ -1,4 +1,6 @@
-<script></script>
+<script setup>
+import offersCard from "../Components/offersCard.vue";
+</script>
 
 <template>
   <nav>
@@ -21,35 +23,35 @@
     <h1>R@mims Metamorphosis Center</h1>
     <div class="banner"><a href="#">Learn More</a></div>
   </header>
+
   <main>
     <section id="offers">
-      <div class="service-box">
-        <div class="service-header">
-          <!-- Image title here -->
-          <h5>Service 1</h5>
-        </div>
-      </div>
-      <div class="service-box">
-        <div class="service-header">
-          <!-- Image title here -->
-          <h5>Service 2</h5>
-        </div>
-      </div>
-
-      <div class="service-box">
-        <div class="service-header">
-          <!-- Image title here -->
-          <h5>Service 3</h5>
-        </div>
-      </div>
-
-      <div class="service-box">
-        <div class="service-header">
-          <!-- Image title here -->
-          <h5>Service 4</h5>
-        </div>
+      <h1>What We Offer</h1>
+      <div class="offers-container">
+        <offersCard
+          message="Hello world this is a message And this text is going to be 
+          to be added line by line
+          "
+          service="Main service"
+        >
+        </offersCard>
+        <offersCard
+          message="Hello world this is a message And this text is going to be 
+          to be added line by line
+          "
+          service="Main service"
+        >
+        </offersCard>
+        <offersCard
+          message="Hello world this is a message And this text is going to be 
+          to be added line by line
+          "
+          service="Main service"
+        >
+        </offersCard>
       </div>
     </section>
+
     <section id="customer-section">
       <div class="left-side">
         <h3>What makes us a customer favorite</h3>
@@ -107,6 +109,7 @@ NAVBAR SECTION
 nav {
   width: 100%;
   height: 100vh;
+  font-weight: normal;
 }
 
 .nav-bg-image {
@@ -146,20 +149,21 @@ nav {
 }
 
 .nav-container ul li:hover {
-  background: #e95793;
+  background: var(--primary-color);
   border-radius: 5px;
 }
 
 .nav-container a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   font-weight: bolder;
 }
 
 .logo {
-  background: #e95793;
+  background: var(--primary-color);
   padding: 8px;
   border-radius: 5px;
+  color: white;
   height: inherit;
   font-weight: bold;
   font-size: 30px;
@@ -169,7 +173,7 @@ nav {
 .banner {
   align-self: center;
   margin-left: 20px;
-  background: #610c9f;
+  background: var(--secondary-color);
   font-weight: bold;
   border-radius: 10px;
   padding: 10px;
@@ -182,7 +186,7 @@ nav {
 }
 
 .banner:hover {
-  background: #610c9f;
+  background: var(--secondary-color);
 }
 
 header {
@@ -198,7 +202,31 @@ header {
 }
 
 header h1 {
-  font-size: 60px;
   color: whitesmoke;
+}
+
+/* MAIN SECTION
+Offers section
+*/
+
+main {
+  border: 1px solid red;
+}
+
+#offers {
+  border: 1px solid green;
+  color: black;
+  background: var(--alternate-background-color);
+  padding: 3% 7%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.offers-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 </style>
