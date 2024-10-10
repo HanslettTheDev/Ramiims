@@ -1,0 +1,82 @@
+{% extends 'layouts/layout.html' %} {% block content %}
+<header>
+  <h1>R@mims Metamorphosis Center</h1>
+  <div class="banner"><a href="#">Learn More</a></div>
+</header>
+
+<main>
+  <section id="offers">
+    <h1>What We Offer</h1>
+    <div class="offers-container">
+      {% include 'components/offers-card.html' %} {% include
+      'components/offers-card.html' %} {% include 'components/offers-card.html'
+      %}
+      <!-- <offersCard -->
+      <!--   message="Hello world this is a message And this text is going to be  -->
+      <!--     to be added line by line -->
+      <!--     " -->
+      <!--   service="Main service" -->
+      <!-- > -->
+      <!-- </offersCard> -->
+      <!-- <offersCard -->
+      <!--   message="Hello world this is a message And this text is going to be  -->
+      <!--     to be added line by line -->
+      <!--     " -->
+      <!--   service="Main service" -->
+      <!-- > -->
+      <!-- </offersCard> -->
+      <!-- <offersCard -->
+      <!--   message="Hello world this is a message And this text is going to be  -->
+      <!--     to be added line by line -->
+      <!--     " -->
+      <!--   service="Main service" -->
+      <!-- > -->
+      <!-- </offersCard> -->
+    </div>
+  </section>
+
+  <section id="customer-section">
+    <div class="left-side">
+      <h3>What makes us a customer favorite</h3>
+      <div class="left-side-body">
+        <div class="image-header">
+          <img src="" alt="some image" />
+        </div>
+        <p>Yes there is some content here</p>
+      </div>
+      <div class="left-side-body">
+        <div class="image-header">
+          <img src="" alt="some image" />
+        </div>
+        <p>Yes there is some content here</p>
+      </div>
+      <div class="left-side-body">
+        <div class="image-header">
+          <img src="" alt="some image" />
+        </div>
+        <p>Yes there is some content here</p>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <form action="">
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Phone Number" />
+        <textarea name="message" id=""></textarea>
+        <button class="">Contact Us</button>
+      </form>
+    </div>
+  </section>
+  <section id="gallery">
+    <h1>Gallery</h1>
+    <div class="image-container">
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+    </div>
+
+    <button class="">More Pictures</button>
+  </section>
+</main>
+{% endblock %}
