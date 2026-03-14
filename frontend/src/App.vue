@@ -1,47 +1,210 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+const message = "Get in Touch";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <nav>
+        <div class="nav-bg-image"></div>
+        <div class="nav-container">
+            <div class="logo">
+                <span>R@MIMS</span>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Blog</a></li>
+                <div class="banner"><a href="#">{{ message }}</a></div>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <header>
+        <h1>R@mims Metamorphosis Center</h1>
+        <span class="action-statement">You get what you deserve</span>
+        <div class="banner">
+            <a href="#">Learn More</a>
+            <button>Contact Us</button>
+        </div>
+    </header>
+    <!-- <main> -->
+    <!--     <section id="offers"> -->
+    <!--         <div class="service-box"> -->
+    <!--             <div class="service-header"> -->
+    <!--                 <!-- Image title here --> -->
+    <!--                 <h5>Service 1</h5> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--         <div class="service-box"> -->
+    <!--             <div class="service-header"> -->
+    <!--                 <!-- Image title here --> -->
+    <!--                 <h5>Service 2</h5> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <div class="service-box"> -->
+    <!--             <div class="service-header"> -->
+    <!--                 <!-- Image title here --> -->
+    <!--                 <h5>Service 3</h5> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <div class="service-box"> -->
+    <!--             <div class="service-header"> -->
+    <!--                 <!-- Image title here --> -->
+    <!--                 <h5>Service 4</h5> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--     </section> -->
+    <!--     <section id="customer-section"> -->
+    <!--         <div class="left-side"> -->
+    <!--             <h3>What makes us a customer favorite</h3> -->
+    <!--             <div class="left-side-body"> -->
+    <!--                 <div class="image-header"> -->
+    <!--                     <img src="" alt="some image" /> -->
+    <!--                 </div> -->
+    <!--                 <p>Yes there is some content here</p> -->
+    <!--             </div> -->
+    <!--             <div class="left-side-body"> -->
+    <!--                 <div class="image-header"> -->
+    <!--                     <img src="" alt="some image" /> -->
+    <!--                 </div> -->
+    <!--                 <p>Yes there is some content here</p> -->
+    <!--             </div> -->
+    <!--             <div class="left-side-body"> -->
+    <!--                 <div class="image-header"> -->
+    <!--                     <img src="" alt="some image" /> -->
+    <!--                 </div> -->
+    <!--                 <p>Yes there is some content here</p> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <div class="right-side"> -->
+    <!--             <form action=""> -->
+    <!--                 <input type="text" placeholder="Name" /> -->
+    <!--                 <input type="text" placeholder="Phone Number" /> -->
+    <!--                 <textarea name="message" id=""></textarea> -->
+    <!--                 <button class="">Contact Us</button> -->
+    <!--             </form> -->
+    <!--         </div> -->
+    <!--     </section> -->
+    <!--     <section id="gallery"> -->
+    <!--         <h1>Gallery</h1> -->
+    <!--         <div class="image-container"> -->
+    <!--             <img src="" alt="" /> -->
+    <!--             <img src="" alt="" /> -->
+    <!--             <img src="" alt="" /> -->
+    <!--             <img src="" alt="" /> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <button class="">More Pictures</button> -->
+    <!--     </section> -->
+    <!-- </main> -->
+    <footer>
+        <p>Build by Venom</p>
+    </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+/*
+NAVBAR SECTION
+*/
+
+nav {
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/images/home.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+.nav-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.nav-container ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 7px;
+}
+
+.nav-container ul li:hover {
+    background: #e95793;
+    border-radius: 5px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+    background: #e95793;
+    padding: 8px;
+    border-radius: 5px;
+    height: inherit;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.banner {
+    align-self: center;
+    margin-left: 20px;
+    background: #610c9f;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.banner a {
+    text-decoration: none;
+    color: white;
+}
 
-  header .wrapper {
+.banner:hover {
+    background: #610c9f;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    text-align: center;
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+    color: whitesmoke;
 }
 </style>
