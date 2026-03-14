@@ -1,9 +1,10 @@
 [project]
-name = "backend"
+name = "ramiims backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "Backend API for ramiims website"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "django>=6.0.3",
+    "djangorestframework>=3.16.1",
 ]
