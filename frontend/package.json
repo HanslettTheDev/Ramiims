@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
-  "private": true,
+  "name": "ramiims",
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "vue": "^3.5.29"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.3",
-    "vite": "^0.10.3"
+    "@vitejs/plugin-vue": "^6.0.4",
+    "vite": "^7.3.1",
+    "vite-plugin-vue-devtools": "^8.0.6"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }
