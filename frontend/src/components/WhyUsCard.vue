@@ -25,9 +25,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #462C7D;
     gap: 20px;
+    border-radius: 20px;
 
     .service-header {
+        padding-top: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -45,6 +48,7 @@
             align-items: center;
             width: 100%;
             gap: 5px;
+            color: white;
 
             span {
                 width: 10%;
@@ -57,8 +61,10 @@
     }
 
     .service-body {
-        width: 200px;
+        height: 150px;
+        padding: 10px;
         text-align: left;
+        color: white;
     }
 }
 </style>

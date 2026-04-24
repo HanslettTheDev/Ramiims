@@ -19,7 +19,7 @@ import SpecialBtn from './SpecialBtn.vue';
 <style scoped>
 header {
     width: 100%;
-    padding: 12px 20px;
+    padding-top: 100px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -33,6 +33,7 @@ header {
 
 .banner {
     position: relative;
+    padding: 15px;
 
     img {
         width: 100%;

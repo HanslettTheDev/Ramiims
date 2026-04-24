@@ -1,44 +1,47 @@
 <script setup>
-console.log("yeah")
+import ContactUsForm from './ContactUsForm.vue';
+import DecoTitles from './DecoTitles.vue';
+import WhyUsCard from './WhyUsCard.vue';
 </script>
 <template>
     <section id="customer-section">
+        <DecoTitles title='What makes us a customer favorite' />
         <div class="left-side">
-            <h3>What makes us a customer favorite</h3>
-            <div class="left-side-body">
-                <div class="image-header">
-                    <img src="" alt="some image" />
-                </div>
-                <p>Yes there is some content here</p>
-            </div>
-            <div class="left-side-body">
-                <div class="image-header">
-                    <img src="" alt="some image" />
-                </div>
-                <p>Yes there is some content here</p>
-            </div>
-            <div class="left-side-body">
-                <div class="image-header">
-                    <img src="" alt="some image" />
-                </div>
-                <p>Yes there is some content here</p>
-            </div>
+            <WhyUsCard />
+            <WhyUsCard />
+            <WhyUsCard />
+            <WhyUsCard />
         </div>
 
         <div class="right-side">
-            <form action="">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Phone Number" />
-                <textarea name="message" id=""></textarea>
-                <button class="">Contact Us</button>
-            </form>
+            <ContactUsForm />
         </div>
     </section>
 
 </template>
 
 <style scoped>
-* {
-    background-color: blue;
+#customer-section {
+    background-color: #F4E7F4;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+}
+
+.left-side {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.right-side {
+    margin-top: 50px;
+    padding: 10px;
+    height: 200px;
+    padding-bottom: 50px;
 }
 </style>

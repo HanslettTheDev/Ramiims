@@ -1,29 +1,44 @@
 <script setup>
+import Button from './Button.vue';
 import SpecialBtn from './SpecialBtn.vue';
 
+function toggleNavBarOn() {
+    document.getElementById("nav-items").style.width = "250px";
+}
+
+
+function toggleNavBarOff() {
+    document.getElementById("nav-items").style.width = "0px";
+}
 </script>
 
 <template>
     <nav>
-        <div class="nav-container">
+        <div id="nav" class="nav-container">
             <div class="logo">
-                <img src="../assets/images/Asset 11.png" alt="Rammims black logo version">
+                <img src="../assets/images/logo-full-black.png" alt="Rammims black logo version">
             </div>
-            <span class="bar-menu">
+            <span @click="toggleNavBarOn()" class="bar-menu">
                 <img src="../assets/images/bar.png" alt="styled bar menu">
             </span>
-            <div class="nav-items">
-                <a class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="nav-items" class="nav-items">
+                <a class="closebtn" @click="toggleNavBarOff()">&times;</a>
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li class="active"><a href="">Home</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Gallery</a></li>
                     <li><a href="">Blog</a></li>
-                    <li>
-                        <SpecialBtn />
-                    </li>
 
                 </ul>
+
+                <div class="nav-btn">
+                    <Button text="Contact Us" />
+                </div>
+
+                <div class="nav-footer-text">
+                    Developed by Venom
+                </div>
+
             </div>
         </div>
     </nav>
@@ -36,7 +51,11 @@ NAVBAR SECTION
 
 nav {
     padding: 15px;
-    position: relative;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    background-color: white;
 }
 
 
@@ -58,22 +77,12 @@ nav {
 }
 
 
-.nav-container {
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
 
-    ul {
-        display: none;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        font-size: 12px;
-    }
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
 }
 
 
@@ -89,49 +98,84 @@ nav {
 
 .nav-items {
     height: 100%;
+    background-color: white;
     width: 0;
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 999;
     overflow-x: hidden;
     padding-top: 65px;
-    display: block;
     transition: ease-in 0.5s;
 
+    .active {
+        background-color: #462C7D;
+
+        a {
+            color: white;
+        }
+    }
+
     .closebtn {
+        border-radius: 100%;
+        padding: 5px;
+        width: 50px;
+        text-align: center;
         position: absolute;
         top: 0;
         right: 25px;
         font-size: 35px;
         margin-left: 50px;
+        cursor: pointer;
     }
+
+    .nav-btn {
+        padding-top: 60px;
+        text-align: center;
+    }
+
+    .nav-footer-text {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(-30%);
+        margin-bottom: 50px;
+        text-decoration: underline;
+    }
+
 
     ul {
+        padding: 0;
+        text-align: center;
+        list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        align-items: center;
+
 
         li {
-            align-self: center;
-            margin-top: 30px;
-            /* padding: 8px 8px 8px 32px; */
-            padding: 8px 20px;
-            border: 1px solid green;
-        }
-
-        a:hover {
-            background: #e95793;
-            border-radius: 5px;
+            width: 70%;
+            border-radius: 20px;
             color: white;
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px solid #831C91;
+
+            a {
+                font-weight: bold;
+                height: 100%;
+            }
+
+            &:hover {
+                background-color: #ff0085;
+
+                a {
+                    color: white;
+                }
+            }
+
         }
-    }
 
 
-    a {
-        border: 1px solid red;
-        font-weight: bolder;
-        text-decoration: none;
     }
 
 }

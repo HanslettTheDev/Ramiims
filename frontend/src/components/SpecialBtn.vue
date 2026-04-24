@@ -7,7 +7,7 @@ let text = 'Contact Us';
 </template>
 <style scoped>
 .banner {
-    background: #610c9f;
+    background: #462C7D;
     font-weight: bold;
     border-radius: 10px;
     padding: 10px;
