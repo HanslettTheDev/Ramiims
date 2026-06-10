@@ -1,11 +1,11 @@
 <script setup>
-import Button from './Button.vue';
-import DecoTitles from './DecoTitles.vue';
-import GalleryPictureBox from './GalleryPictureBox.vue';
+import Button from '@/components/Button.vue';
+import DecoratedTitles from '@/components/DecoratedTitles.vue';
+import GalleryPictureBox from '@/components/GalleryPictureBox.vue';
 </script>
 <template>
     <section id="gallery">
-        <DecoTitles title="Gallery" />
+        <DecoratedTitles title="Gallery" />
         <div class="image-wrapper">
             <GalleryPictureBox image="home.jpeg" />
             <GalleryPictureBox image="ramiims.jpeg" />

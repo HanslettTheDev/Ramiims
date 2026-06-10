@@ -1,11 +1,11 @@
 <script setup>
-import ContactUsForm from './ContactUsForm.vue';
-import DecoTitles from './DecoTitles.vue';
-import WhyUsCard from './WhyUsCard.vue';
+import ContactUsForm from '@/components/ContactUsForm.vue';
+import DecoratedTitles from '@/components/DecoratedTitles.vue';
+import WhyUsCard from '@/components/WhyUsCard.vue';
 </script>
 <template>
     <section id="customer-section">
-        <DecoTitles title='What makes us a customer favorite' />
+        <DecoratedTitles title='What makes us a customer favorite' />
         <div class="left-side">
             <WhyUsCard />
             <WhyUsCard />

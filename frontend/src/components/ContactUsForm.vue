@@ -1,6 +1,6 @@
 <script setup>
-import DecoTitles from './DecoTitles.vue';
 import WhyUsCard from './WhyUsCard.vue';
+import DecoratedTitles from './DecoratedTitles.vue';
 import Button from './Button.vue';
 </script>
 <template>
