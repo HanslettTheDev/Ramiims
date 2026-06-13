@@ -1,4 +1,6 @@
-# ramiims
+# Ramiims
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/61e28edb-3d7f-4b43-a47d-842cbe67f51f/deploy-status)](https://app.netlify.com/projects/ramiims/deploys)
 
 This template should help get you started developing with Vue 3 in Vite.
 
